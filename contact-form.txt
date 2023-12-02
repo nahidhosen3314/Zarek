@@ -1,0 +1,21 @@
+<div class="contact-form">
+    <div class="">
+        <input type="text" placeholder="Name">
+    </div>
+    <div class="">
+        <input type="text" placeholder="Email">
+    </div>
+    <div class="">
+        <textarea name="" placeholder="Write here..." id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="">
+        <a href="" type="submit" class="btn btn-primary">Send Message</a>
+    </div>
+</div>
+
+
+
+----- image link------
+<img src="<?php echo get_template_directory_uri(); ?>/assets/img/error.svg" alt="image">
+
+video 38:43min

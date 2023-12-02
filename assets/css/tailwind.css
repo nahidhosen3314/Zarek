@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --primary: theme(colors.primary);
+}
+
+@layer base {
+    h1 {
+        @apply text-5xl font-bold;
+    }
+    h2 {
+        @apply text-4xl font-bold;
+    }
+    h3 {
+        @apply text-3xl font-bold;
+    }
+    h4 {
+        @apply text-2xl font-bold;
+    }
+    h5 {
+        @apply text-xl font-bold;
+    }
+    h6 {
+        @apply text-lg font-bold;
+    }
+    a {
+        @apply no-underline;
+    }
+    [type="submit"]{
+        @apply cursor-pointer;
+    }
+  }
+
+  @layer components{
+    .btn{
+        @apply px-5 py-2 text-base rounded inline-block;
+    }
+    .btn-primary{
+        @apply bg-primary text-white;
+    }
+  }
+
+
+  li.current_page_item > a{
+    @apply border-b-2 border-white;
+  }
+
+  .h-logo img {
+	max-width: 150px;
+}
+
+/* --------- comment-form ------------ */
+.comment-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-form > *{
+    margin-top: 0;
+}
+
+.comment-form label {
+	display: block;
+}
+
+.comment-form input[type='text'], .comment-form input[type='email'], textarea {
+	width: 100%;
+    border: 1px solid #7c3aed;
+}
+
+.comment-form .submit {
+	color: White;
+	background: #7c3aed;
+	padding: 10px 18px;
+	border-radius: 6px;
+	font-weight: 600;
+    cursor: pointer;
+}
+
+/* ------------ pagenation------------- */
+
+.nav-links {
+	display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 35px;
+}
+
+.nav-links .page-numbers {
+	background: #7c3aed;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 40px;
+	color: #fff;
+    font-weight: 700;
+}
+
+.page-numbers.current {
+	background: #fff;
+	color: #7c3aed;
+	border: 1px solid #7c3aed;
+    cursor: no-drop;
+}
+.nav-links .page-numbers {
+	text-decoration: none !important;
+}
+
+/* ------------------- contact form ------------------ */
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+	width: 100%;
+}
+
+.contact-form {
+    @apply grid gap-5
+}
+
+/* ------------------- Single-property ------------------ */
+table{
+    @apply w-full;
+}
+
+tbody tr td {
+    @apply p-3 border border-borderColor;
+}
+
+/* .blog-sidebar h1,h2,h3,h4,h5,h6{
+    @apply mb-3;
+} */
+
+/* ------------------- Blog sidebar------------------ */
+.side-post {
+	background: linear-gradient(black,white);
+	background-size: 0 3px;
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+    transition: .3s;
+}
+.side-post:hover {
+	background-size: 100% 3px;
+}
+
+/* -------- Newsletter---------- */
+.authbox-login input {
+	padding: 14px 116px 12px 12px;
+    @apply bg-transparent w-full text-white;
+}
+.authbox-login .btn {
+    @apply sm:absolute sm:w-auto w-full sm:mt-0 mt-3 right-0 top-0 rounded-none h-full py-2 px-10;
+}
+.authbox-login {
+    @apply mt-10 relative m-auto max-w-lg;
+}
+.newsletter-sec{
+    @apply bg-slate-800 py-16;
+}
+.authbox-login .btn {
+    @apply bg-primary border-transparent;
+}
+.authbox-login input[type="email"]{
+    @apply focus:shadow-none focus:ring-0 border border-white;
+}
+.authbox-text h2{
+    @apply mb-7 text-4xl font-serif;
+}
+.authbox-text p{
+    @apply text-xl;
+}
+/* ------------------------------- */
+/* .gallery img {
+	width: 50%;
+	flex-grow: 1;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+} */
+
+/* .gallery {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+} */
+
+/* -----------------hero-slider---------------------- */
+
+.hero-slider .owl-stage {
+    @apply flex;
+}
+
+.hero-slider .owl-item {
+    @apply flex flex-1
+}
+
+.hero-slider .owl-dots button {
+    width: 10px;
+    height: 10px;
+    @apply m-1 !bg-[#575D66] p-2 rounded-full;
+}
+
+.hero-slider .owl-dots .owl-dot.active {
+    @apply cursor-no-drop !bg-primary
+}
+
+.hero-slider .owl-dots {
+    @apply text-center mt-4;
+}
+
+/* -----------------Expert-clider slider---------------------- */
+.expert-slider .owl-nav {
+    @apply flex absolute top-1/2 w-full justify-between -translate-y-1/2;
+}
+
+.expert-slider .owl-nav button {
+    @apply !bg-[#e4e4e4] rounded h-10 w-10 flex items-center justify-center
+}
+
+.expert-slider .owl-nav button.disabled {
+    @apply !bg-[#f2f2f2] cursor-no-drop;
+}
+
+.expert-slider .owl-nav button:hover {
+    @apply shadow-lg transition-all;
+}
+
+.expert-slider .owl-dots{
+    @apply text-center mt-4;
+}
+.expert-slider .owl-dots .owl-dot {
+	height: 10px;
+	width: 10px;
+    @apply !bg-[#374151] rounded-full m-1;
+}
+
+.expert-slider .owl-dots .owl-dot.active {
+    @apply !bg-primary cursor-no-drop;
+}
